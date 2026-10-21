@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="220" viewBox="0 0 1200 220" role="img" aria-labelledby="title desc">
+  <title id="title">Ruben Escobal III</title>
+  <desc id="desc">Computer Engineering Student, Entrepreneur, and Organizer</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111315"/>
+      <stop offset=".58" stop-color="#1c2229"/>
+      <stop offset="1" stop-color="#30465b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".85" cy=".1" r=".8">
+      <stop offset="0" stop-color="#9bb4cf" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#9bb4cf" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="220" rx="8" fill="url(#bg)"/>
+  <rect width="1200" height="220" rx="8" fill="url(#glow)"/>
+  <path d="M0 174c175-45 298-16 466 3 178 20 321-39 481-24 102 10 173 31 253 15v52H0z" fill="#111417" fill-opacity=".48"/>
+  <path d="M0 192c202-29 330-1 485 10 217 16 355-26 494-18 96 5 157 18 221 9v27H0z" fill="#111417" fill-opacity=".42"/>
+  <text x="600" y="94" fill="#f4f5ee" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" letter-spacing="-.8">Ruben Escobal III M.</text>
+  <text x="600" y="132" fill="#c9d7e4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="500">Computer Engineering Student  |  Entrepreneur  |  Organizer</text>
+</svg>

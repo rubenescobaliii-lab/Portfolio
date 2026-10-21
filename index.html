@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="Portfolio of Escobal, Ruben III M. — BS Computer Engineering student, business owner in food cart and car sales, and community secretary.">
+  <meta name="author" content="Escobal, Ruben III M.">
+  <meta property="og:title" content="Ruben Escobal III — Portfolio">
+  <meta property="og:description" content="Bachelor of Science in Computer Engineering student, business owner, and community secretary.">
+  <meta property="og:type" content="website">
+  <title>Escobal, Ruben III M. — Portfolio</title>
+
+  <!-- Google Fonts: Bodoni Moda (Editorial Serif), Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,500;1,6..96,600;1,6..96,700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* CSS Variables matching sincerelyyyash.com dark & light modes */
+    :root {
+      color-scheme: dark;
+      --bg-color: #09090b;
+      --bg-card: rgba(24, 24, 27, 0.65);
+      --bg-card-hover: rgba(39, 39, 42, 0.7);
+      --bg-pill: rgba(255, 255, 255, 0.05);
+      --bg-pill-hover: rgba(255, 255, 255, 0.1);
+      --border-color: rgba(255, 255, 255, 0.1);
+      --border-subtle: rgba(255, 255, 255, 0.06);
+      --border-dashed: rgba(255, 255, 255, 0.22);
+      --text-main: #f4f4f5;
+      --text-muted: #a1a1aa;
+      --text-dim: #71717a;
+      --nav-bg: rgba(9, 9, 11, 0.8);
+      --nav-border: rgba(255, 255, 255, 0.08);
+      --hover-glow: rgba(255, 255, 255, 0.15);
+      --accent-purple: #c084fc;
+      --accent-glow: rgba(192, 132, 252, 0.25);
+      --accent-blue: #9bb4cf;
+      --font-serif: 'Bodoni Moda', Georgia, serif;
+      --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+    }
+
+    html.light {
+      color-scheme: light;
+      --bg-color: #ffffff;
+      --bg-card: #f8fafc;
+      --bg-card-hover: #f1f5f9;
+      --bg-pill: rgba(0, 0, 0, 0.05);
+      --bg-pill-hover: rgba(0, 0, 0, 0.08);
+      --border-color: #e2e8f0;
+      --border-subtle: #edf2f7;
+      --border-dashed: rgba(0, 0, 0, 0.2);
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --text-dim: #94a3b8;
+      --nav-bg: rgba(255, 255, 255, 0.85);
+      --nav-border: rgba(0, 0, 0, 0.08);
+      --hover-glow: rgba(0, 0, 0, 0.08);
+      --accent-purple: #9333ea;
+      --accent-glow: rgba(147, 51, 234, 0.18);
+      --accent-blue: #254b70;
+      --font-serif: 'Bodoni Moda', Georgia, serif;
+      --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Container matching Yash's max-w-3xl (approx 768px - 820px) */
+    .container {
+      max-width: 768px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    /* Sticky Navbar */
+    .header-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background-color: var(--nav-bg);
+      border-bottom: 1px solid var(--nav-border);
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .nav-links a {
+      font-family: var(--font-serif);
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-thickness: 1.5px;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Theme Toggle Button */
+    .theme-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--bg-pill);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .theme-toggle-btn:hover {
+      background: var(--bg-pill-hover);
+      transform: scale(1.05);
+    }
+
+    .theme-toggle-btn svg {
+      width: 17px;
+      height: 17px;
+      transition: transform 0.4s ease;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding-top: 50px;
+      padding-bottom: 36px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 36px;
+      align-items: start;
+    }
+
+    @media (max-width: 700px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .hero-portrait-col {
+        order: -1;
+      }
+    }
+
+    .hero-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-pill);
+      border: 1px solid var(--border-color);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 8px #10b981;
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(38px, 5.5vw, 60px);
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      line-height: 1.02;
+      color: var(--text-main);
+      margin-bottom: 22px;
+    }
+
+    .hero-title .hero-name-accent {
+      display: inline-block;
+      font-style: italic;
+      color: var(--accent-blue);
+      font-weight: 600;
+      letter-spacing: -0.035em;
+    }
+
+    .hero-bio {
+      font-size: 15.5px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .hero-bio-lead {
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .hero-bio-tech {
+      line-height: 2.35;
+    }
+
+    /* Formal Portrait Card (Only this image) */
+    .hero-portrait-col {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    @media (max-width: 700px) {
+      .hero-portrait-col {
+        justify-content: flex-start;
+      }
+    }
+
+    .formal-avatar-card {
+      position: relative;
+      width: 220px;
+      height: 265px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      background: #ffffff;
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4), 0 0 20px var(--hover-glow);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .formal-avatar-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent-blue);
+      box-shadow: 0 14px 35px -4px rgba(0, 0, 0, 0.5), 0 0 25px rgba(155, 180, 207, 0.25);
+    }
+
+    .formal-avatar-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .formal-avatar-card:hover .formal-avatar-img {
+      transform: scale(1.025);
+    }
+
+    .formal-avatar-badge {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(9, 9, 11, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      color: #f4f4f5;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      pointer-events: none;
+    }
+
+    /* Inline Skill Chips matching Yash's dash-bordered pills */
+    .skill-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg-pill);
+      border: 1px dashed var(--border-dashed);
+      padding: 1px 7px;
+      border-radius: 6px;
+      font-size: 12.5px;
+      line-height: 1.15;
+      font-weight: 600;
+      color: var(--text-main);
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+      margin: 1px 3px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
+    }
+
+    .skill-chip:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent-purple);
+      background: rgba(168, 85, 247, 0.08);
+    }
+
+    .chip-icon {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      display: block;
+    }
+      flex-shrink: 0;
+      display: inline-block;
+    }
+
+    /* Social Icons Row */
+    .social-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+
+    .social-icon-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background: var(--bg-pill);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .social-icon-btn:hover {
+      color: var(--text-main);
+      border-color: var(--accent-purple);
+      transform: translateY(-2px);
+      box-shadow: 0 0 16px var(--accent-glow);
+    }
+
+    .social-icon-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    /* Copy Email Button with Tooltip */
+    .copy-email-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 14px;
+      height: 38px;
+      border-radius: 8px;
+      background: var(--bg-pill);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.2s ease;
+    }
+
+    .copy-email-btn:hover {
+      color: var(--text-main);
+      border-color: var(--accent-purple);
+      transform: translateY(-2px);
+      box-shadow: 0 0 16px var(--accent-glow);
+    }
+
+    .tooltip-toast {
+      position: absolute;
+      top: -34px;
+      left: 50%;
+      transform: translateX(-50%) translateY(4px);
+      background: var(--text-main);
+      color: var(--bg-color);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.2s ease;
+    }
+
+    .tooltip-toast.active {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Divider */
+    .section-divider {
+      height: 1px;
+      width: 100%;
+      background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+      margin: 44px 0;
+    }
+
+    /* Section Headers */
+    .section-header {
+      margin-bottom: 24px;
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: lowercase;
+      color: var(--text-dim);
+      margin-bottom: 4px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      color: var(--text-main);
+    }
+
+    /* Featured Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 680px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: filter 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  border-color 0.3s ease,
+                  box-shadow 0.3s ease;
+      box-shadow: var(--card-shadow);
+      position: relative;
+      cursor: pointer;
+      will-change: transform, filter, opacity;
+    }
+
+    /* When hovering grid: blur and dim all other non-hovered cards */
+    .projects-grid:not(.has-selected):hover .project-card:not(:hover) {
+      filter: blur(3.5px);
+      opacity: 0.35;
+      transform: scale(0.98);
+    }
+
+    .projects-grid:not(.has-selected) .project-card:hover {
+      filter: blur(0);
+      opacity: 1;
+      transform: translateY(-5px) scale(1.015);
+      border-color: rgba(255, 255, 255, 0.35);
+      box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.55), 0 0 24px var(--hover-glow);
+      z-index: 2;
+    }
+
+    html.light .projects-grid:not(.has-selected) .project-card:hover {
+      border-color: rgba(0, 0, 0, 0.28);
+      box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Active Selected State (via Click or Tap) */
+    .projects-grid.has-selected .project-card:not(.is-selected) {
+      filter: blur(4px) !important;
+      opacity: 0.32 !important;
+      transform: scale(0.975) !important;
+    }
+
+    .projects-grid .project-card.is-selected {
+      filter: blur(0) !important;
+      opacity: 1 !important;
+      transform: translateY(-6px) scale(1.02) !important;
+      border-color: var(--accent-blue) !important;
+      box-shadow: 0 20px 45px -6px rgba(0, 0, 0, 0.7), 0 0 30px rgba(155, 180, 207, 0.35) !important;
+      z-index: 5;
+    }
+
+    html.light .projects-grid .project-card.is-selected {
+      border-color: var(--accent-blue) !important;
+      box-shadow: 0 20px 40px -6px rgba(0, 0, 0, 0.16), 0 0 24px rgba(37, 75, 112, 0.25) !important;
+    }
+
+    .project-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #111;
+      overflow: hidden;
+      position: relative;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .project-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .project-card:hover .project-thumb img {
+      transform: scale(1.03);
+    }
+
+    .project-body {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .project-top-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .project-name {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.3;
+    }
+
+    .project-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .project-ext-btn {
+      color: var(--text-dim);
+      transition: color 0.2s ease, transform 0.2s ease;
+      display: inline-flex;
+    }
+
+    .project-ext-btn:hover {
+      color: var(--text-main);
+      transform: scale(1.1);
+    }
+
+    .project-desc {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: auto;
+    }
+
+    .project-tag {
+      font-size: 11px;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: var(--bg-pill);
+      color: var(--text-muted);
+      border: 1px solid var(--border-subtle);
+    }
+
+    /* Experience Cards - Focus & Blur Effect */
+    .experience-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .experience-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 20px;
+      transition: filter 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  border-color 0.3s ease,
+                  box-shadow 0.3s ease,
+                  background-color 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      will-change: transform, filter, opacity;
+    }
+
+    /* When hovering experience list: blur and dim all other non-hovered cards */
+    .experience-list:not(.has-selected):hover .experience-card:not(:hover) {
+      filter: blur(3.5px);
+      opacity: 0.35;
+      transform: scale(0.985);
+    }
+
+    .experience-list:not(.has-selected) .experience-card:hover {
+      filter: blur(0);
+      opacity: 1;
+      transform: translateY(-4px) scale(1.01);
+      border-color: rgba(255, 255, 255, 0.32);
+      background: var(--bg-card-hover);
+      box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.5), 0 0 22px var(--hover-glow);
+      z-index: 2;
+    }
+
+    html.light .experience-list:not(.has-selected) .experience-card:hover {
+      border-color: rgba(0, 0, 0, 0.28);
+      box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Active Selected State (via Click or Tap) */
+    .experience-list.has-selected .experience-card:not(.is-selected) {
+      filter: blur(4px) !important;
+      opacity: 0.32 !important;
+      transform: scale(0.98) !important;
+    }
+
+    .experience-list .experience-card.is-selected {
+      filter: blur(0) !important;
+      opacity: 1 !important;
+      transform: translateY(-5px) scale(1.015) !important;
+      border-color: var(--accent-blue) !important;
+      background: var(--bg-card-hover) !important;
+      box-shadow: 0 20px 45px -6px rgba(0, 0, 0, 0.65), 0 0 28px rgba(155, 180, 207, 0.35) !important;
+      z-index: 5;
+    }
+
+    html.light .experience-list .experience-card.is-selected {
+      border-color: var(--accent-blue) !important;
+      box-shadow: 0 20px 40px -6px rgba(0, 0, 0, 0.16), 0 0 24px rgba(37, 75, 112, 0.25) !important;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .exp-title-area {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .exp-role {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .exp-company {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .exp-meta {
+      font-size: 12.5px;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-dim);
+      text-align: right;
+    }
+
+    @media (max-width: 580px) {
+      .exp-meta {
+        text-align: left;
+      }
+    }
+
+    .exp-details {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .exp-bullets {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-top: 8px;
+      margin-bottom: 12px;
+    }
+
+    .exp-bullets li {
+      margin-bottom: 6px;
+    }
+
+    .exp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 12px;
+    }
+
+    /* Education Timeline */
+    .edu-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .edu-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 18px 22px;
+      transition: filter 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  border-color 0.3s ease,
+                  box-shadow 0.3s ease;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .edu-item:hover {
+      transform: translateY(-4px) scale(1.01);
+      border-color: rgba(255, 255, 255, 0.32);
+      box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.5), 0 0 22px var(--hover-glow);
+    }
+
+    html.light .edu-item:hover {
+      border-color: rgba(0, 0, 0, 0.28);
+      box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.12);
+    }
+
+    .edu-item.is-selected {
+      transform: translateY(-5px) scale(1.015) !important;
+      border-color: var(--accent-blue) !important;
+      box-shadow: 0 20px 45px -6px rgba(0, 0, 0, 0.65), 0 0 28px rgba(155, 180, 207, 0.35) !important;
+    }
+
+    .edu-year-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 9px;
+      border-radius: 6px;
+      background: var(--bg-pill);
+      border: 1px solid var(--border-subtle);
+      color: var(--accent-purple);
+      white-space: nowrap;
+      min-width: 95px;
+      text-align: center;
+    }
+
+    .edu-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .edu-degree {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .edu-institution {
+      font-size: 13.5px;
+      color: var(--text-muted);
+    }
+
+    /* Skills Grid - Focus & Blur Effect */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 700px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .skill-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 22px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: filter 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  border-color 0.3s ease,
+                  box-shadow 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      will-change: transform, filter, opacity;
+    }
+
+    /* When hovering skills grid: blur and dim all other non-hovered cards */
+    .skills-grid:not(.has-selected):hover .skill-card:not(:hover) {
+      filter: blur(3.5px);
+      opacity: 0.35;
+      transform: scale(0.98);
+    }
+
+    .skills-grid:not(.has-selected) .skill-card:hover {
+      filter: blur(0);
+      opacity: 1;
+      transform: translateY(-5px) scale(1.02);
+      border-color: rgba(255, 255, 255, 0.32);
+      box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.5), 0 0 22px var(--hover-glow);
+      z-index: 2;
+    }
+
+    html.light .skills-grid:not(.has-selected) .skill-card:hover {
+      border-color: rgba(0, 0, 0, 0.28);
+      box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Active Selected State (via Click or Tap) */
+    .skills-grid.has-selected .skill-card:not(.is-selected) {
+      filter: blur(4px) !important;
+      opacity: 0.32 !important;
+      transform: scale(0.975) !important;
+    }
+
+    .skills-grid .skill-card.is-selected {
+      filter: blur(0) !important;
+      opacity: 1 !important;
+      transform: translateY(-6px) scale(1.025) !important;
+      border-color: var(--accent-blue) !important;
+      box-shadow: 0 20px 45px -6px rgba(0, 0, 0, 0.65), 0 0 28px rgba(155, 180, 207, 0.35) !important;
+      z-index: 5;
+    }
+
+    html.light .skills-grid .skill-card.is-selected {
+      border-color: var(--accent-blue) !important;
+      box-shadow: 0 20px 40px -6px rgba(0, 0, 0, 0.16), 0 0 24px rgba(37, 75, 112, 0.25) !important;
+    }
+
+    .skill-card-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-dim);
+      font-family: 'JetBrains Mono', monospace;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .skill-pills-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* Peer-dimming on individual skill badges */
+    .skill-pills-wrap:hover .skill-badge:not(:hover) {
+      opacity: 0.6;
+    }
+
+    .skill-badge {
+      font-size: 12.5px;
+      font-weight: 500;
+      background: var(--bg-pill);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      padding: 5px 10px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .skill-badge:hover {
+      border-color: var(--accent-purple);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(192, 132, 252, 0.2);
+    }
+
+    /* Contact Card Banner (Yash Thakur style) */
+    .contact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      position: relative;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .contact-headline {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--text-main);
+      letter-spacing: -0.025em;
+    }
+
+    .contact-desc {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 580px;
+    }
+
+    .contact-action-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--text-main);
+      color: var(--bg-color);
+      font-size: 13.5px;
+      font-weight: 600;
+      padding: 9px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-pill);
+      color: var(--text-main);
+      font-size: 13.5px;
+      font-weight: 600;
+      padding: 9px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: 1px solid var(--border-color);
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-pill-hover);
+      border-color: var(--accent-purple);
+      transform: translateY(-1px);
+    }
+
+    /* Footer */
+    .site-footer {
+      padding: 40px 0 60px;
+      border-top: 1px solid var(--border-subtle);
+      margin-top: 60px;
+      font-size: 13px;
+      color: var(--text-dim);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .back-to-top {
+      font-family: var(--font-serif);
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .back-to-top:hover {
+      color: var(--text-main);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Topbar Navigation (sincerelyyyash.com layout) -->
+  <header class="header-nav">
+    <div class="container nav-inner">
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#home">home</a>
+        <a href="#projects">projects</a>
+        <a href="#experience">work</a>
+        <a href="#education">education</a>
+        <a href="#skills">skills</a>
+        <a href="#contact">contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Dark / Light Theme Toggle -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme" title="Toggle theme">
+          <!-- Sun Icon (shown in dark mode) -->
+          <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+          </svg>
+          <!-- Moon Icon (shown in light mode) -->
+          <svg id="moonIcon" style="display: none;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrap -->
+  <main class="container">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <!-- Status Badge -->
+          <div class="hero-status-pill">
+            <span class="status-dot"></span>
+            <span>Open to Opportunities · Rizal, Philippines</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm Ruben<br>
+            <span class="hero-name-accent">Escobal III.</span>
+          </h1>
+
+          <div class="hero-bio">
+            <p class="hero-bio-lead">
+              I am a <strong>Bachelor of Science in Computer Engineering</strong> student at <strong>ICCT Colleges</strong> and also an active business owner in the food cart industry and small car dealership and sales industry.
+            </p>
+            <p class="hero-bio-tech">
+              I build software and systems with 
+              <!-- Python Chip -->
+              <span class="skill-chip">
+                <svg class="chip-icon" viewBox="0 0 24 24" fill="none">
+                  <path d="M11.9 2C6.7 2 7 4.2 7 4.2V6.5H12V7.3H5.1S2 7 2 12.2C2 17.4 4.7 17.1 4.7 17.1H6.3V14.8C6.3 14.8 6.2 12 9 12H13.9C13.9 12 16.7 12 16.7 9.2V4.4C16.7 4.4 17.1 2 11.9 2ZM9.6 3.7C10.2 3.7 10.7 4.8C10.7 5.4 10.2 5.9 9.6 5.9C9 5.9 8.5 5.4 8.5 4.8C8.5 4.2 9 3.7 9.6 3.7Z" fill="#387eb8"/>
+                  <path d="M12.1 22C17.3 22 17 19.8 17 19.8V17.5H12V16.7H18.9S22 17 22 11.8C22 6.6 19.3 6.9 19.3 6.9H17.7V9.2C17.7 9.2 17.8 12 15 12H10.1C10.1 12 7.3 12 7.3 14.8V19.6C7.3 19.6 6.9 22 12.1 22ZM14.4 20.3C13.8 20.3 13.3 19.8 13.3 19.2C13.3 18.6 13.8 18.1 14.4 18.1C15 18.1 15.5 18.6 15.5 19.2C15.5 19.8 15 20.3 14.4 20.3Z" fill="#ffe052"/>
+                </svg>
+                Python
+              </span> 
+              and 
+              <!-- Java Chip -->
+              <span class="skill-chip">
+                <svg class="chip-icon" viewBox="0 0 24 24" fill="#ea2d2e">
+                  <path d="M8.8 16.5c0 0-1.8.3.4 1.3 2.7 1.2 5.9.8 9.3-.2 0 0-1.5.7-3.8.9-3.2.4-6.4 0-7.3-1.2-.5-.6.2-.8 1.4-.8zm-.6 2.4c0 0-1.5.3.3 1 2.2.8 5 .7 8.3-.1 0 0-1.5.6-3.4.7-2.9.2-5.7-.1-6.5-1-.5-.5.2-.6 1.3-.6zm10.7-5.5c1.4 1.4.3 2.8-.7 3.8-1.5 1.4-3.8 2.2-6.5 2.5-3.3.4-7.2.2-8.3-1.3-.8-1.1.2-1.9 1.5-2.1 1.4-.2 2.7.2 4.1.3 3.6.4 7-.3 7.8-1.7.5-.9-.1-1.3-.8-1.6 0 0 1.9.4 2.9 2.1z"/>
+                  <path d="M13.6 2.1c1.2 1.3 1.1 2.5-.2 3.8-1.6 1.5-3.5 2.8-3.4 4.5.1 1.7 1.6 2.7 2.6 3.9.7.9.9 1.8.4 2.8-.5 1-1.4 1.5-2.4 1.7 0 0 .8-.8 1.1-1.7.4-1.1.1-2.1-.7-3-1.1-1.3-2.5-2.4-2.5-4.2-.1-1.9 1.8-3.3 3.3-4.7 1-1 1.4-1.9.9-2.9-.4-.7-.9-1-1.4-1.2 1.1.2 1.8.5 2.3 1z" fill="#0074bd"/>
+                </svg>
+                Java
+              </span>,
+              develop web solutions with 
+              <!-- HTML Chip -->
+              <span class="skill-chip">
+                <svg class="chip-icon" viewBox="0 0 24 24" fill="#e34f26">
+                  <path d="M3 2l1.8 20.2L12 24l7.2-1.8L21 2H3zm14.7 6.1l-.2 2.4h-7.6l.2 2.4h7.2l-.6 6.3L12 20.4l-4.5-1.2-.3-3.6h2.4l.2 1.7 2.2.6 2.2-.6.2-2.7H7.1L6.5 6.1h11.2z"/>
+                </svg>
+                HTML
+              </span> 
+              and 
+              <!-- JavaScript Chip -->
+              <span class="skill-chip">
+                <svg class="chip-icon" viewBox="0 0 24 24" fill="#f7df1e">
+                  <rect width="24" height="24" rx="4" fill="#f7df1e"/>
+                  <path d="M6 18.5c1.2.7 2.5 1.1 3.8 1.1 2.2 0 3.6-1.1 3.6-3.1v-6.9h-2.5v6.9c0 1-.5 1.5-1.5 1.5-.7 0-1.4-.2-1.9-.6l-1.5 1.1zm8.3-.3c1.3.8 2.8 1.3 4.3 1.3 2.5 0 4-1.3 4-3.3 0-1.9-1.2-2.8-2.9-3.5-1.1-.5-1.7-.8-1.7-1.4 0-.5.4-.9 1.3-.9.9 0 1.8.3 2.5.8l1.1-1.7c-.9-.6-2.1-1-3.4-1-2.4 0-3.9 1.4-3.9 3.2 0 1.8 1.1 2.7 2.8 3.4 1.2.5 1.8.9 1.8 1.5 0 .6-.6 1-1.5 1-1 0-2.1-.4-3-1.1l-1.5 1.4z" fill="#000000"/>
+                </svg>
+                JavaScript
+              </span>,
+              backed by hands-on execution in 
+              <!-- Budget Proposals Chip -->
+              <span class="skill-chip">
+                <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Budget Proposals
+              </span> 
+              and public administrative documentation as <strong>Secretary Department of Barangay Mambugan</strong>.
+            </p>
+          </div>
+
+          <!-- Social Row & Action Buttons -->
+          <div class="social-row">
+            <!-- GitHub Link -->
+            <a class="social-icon-btn" href="https://github.com/rubeniii" target="_blank" rel="noopener noreferrer" title="Ruben's GitHub: rubeniii">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256">
+                <path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path>
+              </svg>
+            </a>
+
+            <!-- Gmail Compose Link -->
+            <a class="social-icon-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=rubenescobaliii@gmail.com&su=Hello%20Ruben%20-%20Portfolio%20Inquiry" target="_blank" rel="noopener noreferrer" title="Send Gmail to rubenescobaliii@gmail.com">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256">
+                <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"></path>
+              </svg>
+            </a>
+
+            <!-- One-Click Copy Email Button -->
+            <button class="copy-email-btn" id="copyEmailBtn" type="button" aria-label="Copy email address">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              <span>rubenescobaliii@gmail.com</span>
+              <span class="tooltip-toast" id="copyToast">Copied to clipboard!</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Formal Portrait Column (Only this image) -->
+        <div class="hero-portrait-col">
+          <div class="formal-avatar-card">
+            <img class="formal-avatar-img" src="assets/ruben-formal.jpg" alt="Escobal, Ruben III M. - Formal Portrait">
+            <div class="formal-avatar-badge">
+              <span class="status-dot"></span>
+              <span>4th Year BSCOE · ICCT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section id="projects">
+      <div class="section-header">
+        <p class="section-label">featured</p>
+        <h2 class="section-title">projects</h2>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Food Cart System -->
+        <article class="project-card">
+          <div class="project-thumb">
+            <img src="assets/project-foodcart.svg" alt="Food Cart POS & Inventory Management System" loading="lazy">
+          </div>
+          <div class="project-body">
+            <div class="project-top-row">
+              <h3 class="project-name">Food Cart POS & Daily Inventory</h3>
+              <div class="project-links">
+                <a class="project-ext-btn" href="https://github.com/rubeniii" target="_blank" rel="noopener noreferrer" title="View Source on GitHub">
+                  <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <p class="project-desc">
+              Custom inventory and sales point tailored for food cart operations. Tracks daily perishable stock usage, real-time revenue, supplier restock thresholds, and calculates net margins.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">HTML5 / CSS</span>
+              <span class="project-tag">POS Systems</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Car Dealership Portal -->
+        <article class="project-card">
+          <div class="project-thumb">
+            <img src="assets/project-cardealership.svg" alt="AutoDeal — Dealership Inventory & Sales Management" loading="lazy">
+          </div>
+          <div class="project-body">
+            <div class="project-top-row">
+              <h3 class="project-name">AutoDeal · Dealership & Sales Tracker</h3>
+              <div class="project-links">
+                <a class="project-ext-btn" href="https://github.com/rubeniii" target="_blank" rel="noopener noreferrer" title="View Source on GitHub">
+                  <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <p class="project-desc">
+              Comprehensive inventory management for vehicle units, client installment schedule calculators, deed of sale generation, and transaction archiving for independent car sales.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Java</span>
+              <span class="project-tag">Database / SQL</span>
+              <span class="project-tag">Financing Logic</span>
+              <span class="project-tag">Business Tool</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Barangay Mambugan Document & Budget System -->
+        <article class="project-card">
+          <div class="project-thumb">
+            <img src="assets/project-barangay.svg" alt="Barangay Mambugan Document & Budget Portal" loading="lazy">
+          </div>
+          <div class="project-body">
+            <div class="project-top-row">
+              <h3 class="project-name">Barangay Document & Budget Portal</h3>
+              <div class="project-links">
+                <a class="project-ext-btn" href="https://github.com/rubeniii" target="_blank" rel="noopener noreferrer" title="View Details">
+                  <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <p class="project-desc">
+              Administrative workflow system developed for Barangay Mambugan. Standardizes resident clearance issuance, budget proposal breakdowns, and department ordinance archiving.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">Budget Proposals</span>
+              <span class="project-tag">Public Records</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Embedded Engineering Prototype -->
+        <article class="project-card">
+          <div class="project-thumb">
+            <img src="assets/project-engineering.svg" alt="BSCOE Microcontroller & Telemetry Prototype" loading="lazy">
+          </div>
+          <div class="project-body">
+            <div class="project-top-row">
+              <h3 class="project-name">Sensor Telemetry & Embedded Controller</h3>
+              <div class="project-links">
+                <a class="project-ext-btn" href="https://github.com/rubeniii" target="_blank" rel="noopener noreferrer" title="View Source on GitHub">
+                  <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <p class="project-desc">
+              Computer engineering hardware-software prototype connecting microcontrollers with digital sensors. Streams real-time telemetry into Python visualizers for diagnostic analysis.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Computer Engineering</span>
+              <span class="project-tag">Logic Design</span>
+              <span class="project-tag">IoT / Hardware</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- FEATURED EXPERIENCE SECTION -->
+    <section id="experience">
+      <div class="section-header">
+        <p class="section-label">featured</p>
+        <h2 class="section-title">work experience</h2>
+      </div>
+
+      <div class="experience-list">
+        <!-- Job 1: Barangay Mambugan -->
+        <div class="experience-card">
+          <div class="exp-header">
+            <div class="exp-title-area">
+              <h3 class="exp-role">
+                <span>Secretary</span>
+                <span style="font-weight: 400; color: var(--text-dim);">· Department of Barangay Mambugan</span>
+              </h3>
+              <p class="exp-company">Local Government Unit · Public Administration</p>
+            </div>
+            <div class="exp-meta">
+              <p>Active Service</p>
+              <p>Mambugan, Antipolo, PH</p>
+            </div>
+          </div>
+          <div class="exp-details">
+            <ul class="exp-bullets">
+              <li>Spearheaded departmental paperwork, official correspondence, and municipal documentation requirements.</li>
+              <li>Authored and structured comprehensive budget proposals for barangay programs, community projects, and resource allocations.</li>
+              <li>Maintained accurate filing systems, resident verification records, and clearance certification pipelines.</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="project-tag">Budget Proposals</span>
+              <span class="project-tag">Official Paperwork</span>
+              <span class="project-tag">Public Administration</span>
+              <span class="project-tag">Record Management</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job 2: Business Owner -->
+        <div class="experience-card">
+          <div class="exp-header">
+            <div class="exp-title-area">
+              <h3 class="exp-role">
+                <span>Business Owner & Founder</span>
+              </h3>
+              <p class="exp-company">Food Cart Industry & Small Car Dealership and Sales</p>
+            </div>
+            <div class="exp-meta">
+              <p>Present</p>
+              <p>Antipolo / Rizal, PH</p>
+            </div>
+          </div>
+          <div class="exp-details">
+            <ul class="exp-bullets">
+              <li>Owns and operates commercial food cart units, supervising daily inventory restocking, sales reconciliation, and vendor sourcing.</li>
+              <li>Manages vehicle acquisitions, vehicle inspections, pricing valuations, and customer negotiations in the small car sales sector.</li>
+              <li>Formulates financing terms, client contracts, and day-to-day cash flow management for sustainable enterprise growth.</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="project-tag">Business Ownership</span>
+              <span class="project-tag">Sales & Negotiations</span>
+              <span class="project-tag">Inventory Control</span>
+              <span class="project-tag">Customer Relations</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job 3: Organizer & Project Assistant -->
+        <div class="experience-card">
+          <div class="exp-header">
+            <div class="exp-title-area">
+              <h3 class="exp-role">
+                <span>Organizer & Project Assistant</span>
+              </h3>
+              <p class="exp-company">Community Initiatives & Academic Projects</p>
+            </div>
+            <div class="exp-meta">
+              <p>Ongoing</p>
+              <p>Rizal, Philippines</p>
+            </div>
+          </div>
+          <div class="exp-details">
+            <ul class="exp-bullets">
+              <li>Coordinates team assignments, timeline schedules, and material procurement for community outreach and student initiatives.</li>
+              <li>Ensures cross-functional communication between project leaders, team members, and external suppliers to meet delivery goals.</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="project-tag">Project Organizing</span>
+              <span class="project-tag">Logistics Support</span>
+              <span class="project-tag">Team Coordination</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- EDUCATIONAL ATTAINMENT SECTION -->
+    <section id="education">
+      <div class="section-header">
+        <p class="section-label">academic</p>
+        <h2 class="section-title">educational attainment</h2>
+      </div>
+
+      <div class="edu-timeline">
+        <!-- College -->
+        <div class="edu-item">
+          <span class="edu-year-badge">4th YEAR · CURRENT</span>
+          <div class="edu-content">
+            <h3 class="edu-degree">Bachelor of Science in Computer Engineering (BSCOE)</h3>
+            <p class="edu-institution">ICCT COLLEGES</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+      <div class="section-header">
+        <p class="section-label">expertise</p>
+        <h2 class="section-title">skills</h2>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Technical Skills -->
+        <div class="skill-card">
+          <h3 class="skill-card-title">
+            <span>💻</span>
+            <span>Technical</span>
+          </h3>
+          <div class="skill-pills-wrap">
+            <span class="skill-badge">Python</span>
+            <span class="skill-badge">Java</span>
+            <span class="skill-badge">HTML</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">Git & GitHub</span>
+            <span class="skill-badge">Computer Engineering</span>
+            <span class="skill-badge">Hardware & Circuitry</span>
+          </div>
+        </div>
+
+        <!-- Professional Skills -->
+        <div class="skill-card">
+          <h3 class="skill-card-title">
+            <span>📋</span>
+            <span>Administrative</span>
+          </h3>
+          <div class="skill-pills-wrap">
+            <span class="skill-badge">Budget Proposals</span>
+            <span class="skill-badge">Paperworks & Records</span>
+            <span class="skill-badge">Public Administration</span>
+            <span class="skill-badge">Spreadsheet & Accounting</span>
+            <span class="skill-badge">Official Documentation</span>
+          </div>
+        </div>
+
+        <!-- Personal & Business Skills -->
+        <div class="skill-card">
+          <h3 class="skill-card-title">
+            <span>🚀</span>
+            <span>Personal & Business</span>
+          </h3>
+          <div class="skill-pills-wrap">
+            <span class="skill-badge">Organizer</span>
+            <span class="skill-badge">Project Assistant</span>
+            <span class="skill-badge">Business Ownership</span>
+            <span class="skill-badge">Food Cart Operations</span>
+            <span class="skill-badge">Car Dealership & Sales</span>
+            <span class="skill-badge">Negotiation</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- CONTACT / GET IN TOUCH -->
+    <section id="contact">
+      <div class="contact-card">
+        <h2 class="contact-headline">Let's connect & collaborate.</h2>
+        <p class="contact-desc">
+          Whether you're interested in discussing software engineering projects, business opportunities in food carts or car sales, or municipal initiatives, my inbox is always open.
+        </p>
+
+        <div class="contact-action-row">
+          <a class="btn-primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=rubenescobaliii@gmail.com&su=Hello%20Ruben%20-%20Portfolio%20Inquiry" target="_blank" rel="noopener noreferrer" title="Send email via Gmail">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 256 256">
+              <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"></path>
+            </svg>
+            <span>Email Ruben</span>
+          </a>
+
+          <a class="btn-secondary" href="https://github.com/rubeniii" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 256 256">
+              <path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path>
+            </svg>
+            <span>GitHub Profile</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <p>© <span id="currentYear">2026</span> Escobal, Ruben III M. All rights reserved.</p>
+      <a class="back-to-top" href="#home">Back to top ↑</a>
+    </footer>
+
+  </main>
+
+  <!-- JavaScript for Theme and Copy Email -->
+  <script>
+    (function() {
+      // 1. Theme Management (sincerelyyyash.com style)
+      const html = document.documentElement;
+      const themeToggleBtn = document.getElementById('themeToggleBtn');
+      const sunIcon = document.getElementById('sunIcon');
+      const moonIcon = document.getElementById('moonIcon');
+
+      function applyTheme(isLight) {
+        if (isLight) {
+          html.classList.remove('dark');
+          html.classList.add('light');
+          sunIcon.style.display = 'none';
+          moonIcon.style.display = 'block';
+        } else {
+          html.classList.remove('light');
+          html.classList.add('dark');
+          sunIcon.style.display = 'block';
+          moonIcon.style.display = 'none';
+        }
+      }
+
+      // Check saved theme or system preference
+      const savedTheme = localStorage.getItem('portfolio-theme');
+      if (savedTheme === 'light') {
+        applyTheme(true);
+      } else {
+        applyTheme(false);
+      }
+
+      themeToggleBtn.addEventListener('click', () => {
+        const isCurrentLight = html.classList.contains('light');
+        applyTheme(!isCurrentLight);
+        localStorage.setItem('portfolio-theme', !isCurrentLight ? 'light' : 'dark');
+      });
+
+      // 2. Dynamic Year
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+      // 3. One-Click Copy Email
+      const copyEmailBtn = document.getElementById('copyEmailBtn');
+      const copyToast = document.getElementById('copyToast');
+
+      copyEmailBtn.addEventListener('click', async () => {
+        const email = 'rubenescobaliii@gmail.com';
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(email);
+          } else {
+            const textarea = document.createElement('textarea');
+            textarea.value = email;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+          }
+          copyToast.classList.add('active');
+          setTimeout(() => {
+            copyToast.classList.remove('active');
+          }, 2200);
+        } catch (err) {
+          console.error('Failed to copy email:', err);
+        }
+      });
+
+      // 4. Project Card Selection & Focus Blur
+      const projectsGrid = document.querySelector('.projects-grid');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      if (projectsGrid && projectCards.length) {
+        projectCards.forEach(card => {
+          card.addEventListener('click', (e) => {
+            // Allow direct navigation when clicking GitHub or external link buttons
+            if (e.target.closest('a')) return;
+
+            const isAlreadySelected = card.classList.contains('is-selected');
+
+            // Reset selection across all cards
+            projectCards.forEach(c => c.classList.remove('is-selected'));
+
+            if (isAlreadySelected) {
+              projectsGrid.classList.remove('has-selected');
+            } else {
+              card.classList.add('is-selected');
+              projectsGrid.classList.add('has-selected');
+            }
+          });
+        });
+
+        // Click outside the projects grid clears selection
+        document.addEventListener('click', (e) => {
+          if (!projectsGrid.contains(e.target) && projectsGrid.classList.contains('has-selected')) {
+            projectCards.forEach(c => c.classList.remove('is-selected'));
+            projectsGrid.classList.remove('has-selected');
+          }
+        });
+      }
+
+      // 5. Experience Card Selection & Focus Blur
+      const expList = document.querySelector('.experience-list');
+      const expCards = document.querySelectorAll('.experience-card');
+
+      if (expList && expCards.length) {
+        expCards.forEach(card => {
+          card.addEventListener('click', (e) => {
+            // Allow direct click on links or interactive buttons inside if any
+            if (e.target.closest('a') || e.target.closest('button')) return;
+
+            const isAlreadySelected = card.classList.contains('is-selected');
+
+            // Reset selection across all experience cards
+            expCards.forEach(c => c.classList.remove('is-selected'));
+
+            if (isAlreadySelected) {
+              expList.classList.remove('has-selected');
+            } else {
+              card.classList.add('is-selected');
+              expList.classList.add('has-selected');
+            }
+          });
+        });
+
+        // Click outside the experience list clears selection
+        document.addEventListener('click', (e) => {
+          if (!expList.contains(e.target) && expList.classList.contains('has-selected')) {
+            expCards.forEach(c => c.classList.remove('is-selected'));
+            expList.classList.remove('has-selected');
+          }
+        });
+      }
+
+      // 6. Skills Card Selection & Focus Blur
+      const skillsGrid = document.querySelector('.skills-grid');
+      const skillCards = document.querySelectorAll('.skill-card');
+
+      if (skillsGrid && skillCards.length) {
+        skillCards.forEach(card => {
+          card.addEventListener('click', (e) => {
+            const isAlreadySelected = card.classList.contains('is-selected');
+
+            // Reset selection across all skill cards
+            skillCards.forEach(c => c.classList.remove('is-selected'));
+
+            if (isAlreadySelected) {
+              skillsGrid.classList.remove('has-selected');
+            } else {
+              card.classList.add('is-selected');
+              skillsGrid.classList.add('has-selected');
+            }
+          });
+        });
+
+        // Click outside the skills grid clears selection
+        document.addEventListener('click', (e) => {
+          if (!skillsGrid.contains(e.target) && skillsGrid.classList.contains('has-selected')) {
+            skillCards.forEach(c => c.classList.remove('is-selected'));
+            skillsGrid.classList.remove('has-selected');
+          }
+        });
+      }
+
+      // 7. Education Card Selection
+      const eduItems = document.querySelectorAll('.edu-item');
+      if (eduItems.length) {
+        eduItems.forEach(item => {
+          item.addEventListener('click', () => {
+            item.classList.toggle('is-selected');
+          });
+        });
+        document.addEventListener('click', (e) => {
+          eduItems.forEach(item => {
+            if (!item.contains(e.target) && item.classList.contains('is-selected')) {
+              item.classList.remove('is-selected');
+            }
+          });
+        });
+      }
+
+    })();
+  </script>
+</body>
+</html>
